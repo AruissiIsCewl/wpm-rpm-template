@@ -1,4 +1,4 @@
-// jus use Hook(L"Process-Name-Here.exe")
+// jus use Attach(L"Process-Name-Here.exe")
 
 /*
     How does this work? Basically it cycles through all your processes until it finds the process you specified, this should NOT be used for kernel anticheat games as it is most definitely detected
@@ -21,7 +21,7 @@
 
 
 
-DWORD Hook(const wchar_t* proc) noexcept
+DWORD Attach(const wchar_t* proc) noexcept
 {
     HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 
